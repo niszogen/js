@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        </style> 
+  </head>
+  <body>
+
+    <div id="app">
+        {{ SansGranie }}
+      </div>
+      <br>
+      <div id="app-2">
+        <span v-bind:title="message">
+Trzymaj tu swoją mychę chwile.
+        </span>
+      </div>
+      <br>
+      <div id="app-3">
+        <span v-if="seen">Widzisz mnie</span>
+        <button onclick="app3.seen = false">Już nie</button>
+      </div>
+      <br>
+      Zrób to:
+      <br>
+      <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+      </div>
+      <br>
+      <img src="https://www.wykop.pl/cdn/c3201142/comment_z23j6nSfPDuiPmlM3NmTqeDi9xlRLMOT,w400.jpg">
+      <br>
+      <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Na otwrut</button>
+      </div>
+      <br>
+      <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+      </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="index.js"></script>
+
+  </body>
+</html>
